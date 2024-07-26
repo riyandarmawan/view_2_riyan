@@ -30,5 +30,5 @@ Route::get('evaluasi/jawab/empat/{jurusan}', function($jurusan) {
         ],
     ];
 
-    return view('jurusan.profile', $profile[$jurusan]);
+    return view('jurusan.profile', $profile[$jurusan] ?? abort(404));
 });
